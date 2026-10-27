@@ -19,6 +19,9 @@ export function readSettings(store) {
     const stored = store.get(key);
     if (stored != null && stored !== "") values[key] = stored;
   }
+  if (["Скачать Excel", "Download Excel"].includes(String(values.buttonLabel).trim())) {
+    values.buttonLabel = DEFAULTS.buttonLabel;
+  }
   if (!["left", "center", "right"].includes(values.alignH)) values.alignH = DEFAULTS.alignH;
   if (!["top", "center", "bottom"].includes(values.alignV)) values.alignV = DEFAULTS.alignV;
   if (!isHexColor(values.buttonColor)) values.buttonColor = DEFAULTS.buttonColor;
