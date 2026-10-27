@@ -18,7 +18,7 @@ export function excelSheetName(raw, used) {
   return candidate;
 }
 
-const EXTENSION_TITLES = new Set(["download excel", "скачать excel"]);
+const EXTENSION_TITLES = new Set(["download excel", "скачать excel", "скачать в excel"]);
 
 export function usableReportName(...candidates) {
   for (const candidate of candidates) {

@@ -1,5 +1,5 @@
 export const DEFAULTS = {
-  buttonLabel: "Скачать Excel",
+  buttonLabel: "Скачать в excel",
   alignH: "right",
   alignV: "bottom",
   buttonColor: "#107c41",

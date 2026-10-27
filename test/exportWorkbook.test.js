@@ -74,6 +74,7 @@ test("file name follows the dashboard page or a custom value", () => {
     "leadgen-weekly-report",
   );
   assert.equal(usableReportName("Скачать Excel", "Parameters", "federated.abc"), "");
+  assert.equal(usableReportName("Скачать в excel", "Parameters", "federated.abc"), "");
 });
 
 test("default filename mode combines report and dashboard page", () => {
