@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Настройка кнопки Excel</title>
+    <link rel="stylesheet" href="/src/configure.css" />
+  </head>
+  <body>
+    <form id="config">
+      <label>
+        Подпись кнопки
+        <input id="buttonLabel" name="buttonLabel" type="text" maxlength="80" />
+      </label>
+
+      <fieldset>
+        <legend>Положение</legend>
+        <label>
+          По горизонтали
+          <select id="alignH" name="alignH">
+            <option value="left">Слева</option>
+            <option value="center">По центру</option>
+            <option value="right">Справа</option>
+          </select>
+        </label>
+        <label>
+          По вертикали
+          <select id="alignV" name="alignV">
+            <option value="top">Сверху</option>
+            <option value="center">По центру</option>
+            <option value="bottom">Снизу</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <label>
+        Цвет кнопки
+        <input id="buttonColor" name="buttonColor" type="text" spellcheck="false" placeholder="#107c41" />
+      </label>
+
+      <fieldset>
+        <legend>Имя файла</legend>
+        <label class="choice">
+          <input type="radio" name="fileNameMode" value="dashboard" />
+          Название страницы дашборда
+        </label>
+        <label class="choice">
+          <input type="radio" name="fileNameMode" value="custom" />
+          Своё имя
+        </label>
+        <input id="customFileName" name="customFileName" type="text" maxlength="120" placeholder="Лиды за 30 дней" />
+        <label class="choice">
+          <input type="radio" name="fileNameMode" value="report-page" />
+          Название отчёта и страницы
+        </label>
+      </fieldset>
+
+      <p id="formError" role="alert"></p>
+      <div class="actions">
+        <button type="button" id="cancel">Отмена</button>
+        <button type="submit" id="save">Сохранить</button>
+      </div>
+    </form>
+    <script src="/vendor/tableau.extensions.1.latest.js"></script>
+    <script type="module" src="/src/configure.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <dashboard-extension id="com.myfin.extensions.dashboard-excel-export" extension-version="0.1.0">
+    <default-locale>ru_RU</default-locale>
+    <name resource-id="name"/>
+    <description>Кнопка скачивает все графики текущей страницы дашборда в один файл Excel.</description>
+    <author name="myfin" email="analytics@myfin.local" organization="myfin" website="https://myfin.by"/>
+    <min-api-version>1.4</min-api-version>
+    <source-location>
+      <url>https://xander-lein.github.io/tableau_export_to_excel_button/</url>
+    </source-location>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMElEQVR42mNgGAWjYBSMglEwCkbBKBgFozAaY8QYjBFjMEaMwRgxBmPEGIwRYzAGAAAzqgO3pW4h1gAAAABJRU5ErkJggg==</icon>
+    <context-menu>
+      <configure-context-menu-item />
+    </context-menu>
+  </dashboard-extension>
+  <resources>
+    <resource id="name">
+      <text locale="ru_RU">Скачать Excel</text>
+      <text locale="en_US">Download Excel</text>
+    </resource>
+  </resources>
+</manifest>
