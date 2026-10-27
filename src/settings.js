@@ -3,7 +3,7 @@ export const DEFAULTS = {
   alignH: "right",
   alignV: "bottom",
   buttonColor: "#107c41",
-  fileNameMode: "dashboard",
+  fileNameMode: "report-page",
   customFileName: "",
 };
 

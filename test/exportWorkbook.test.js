@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { buildWorkbook, cellValue, downloadFileName, excelSheetName, usableReportName } from "../src/exportWorkbook.js";
+import { DEFAULTS } from "../src/settings.js";
 
 function fakeExcelJS() {
   class Worksheet {
@@ -73,6 +74,14 @@ test("file name follows the dashboard page or a custom value", () => {
     "leadgen-weekly-report",
   );
   assert.equal(usableReportName("Скачать Excel", "Parameters", "federated.abc"), "");
+});
+
+test("default filename mode combines report and dashboard page", () => {
+  assert.equal(DEFAULTS.fileNameMode, "report-page");
+  assert.equal(
+    downloadFileName(DEFAULTS.fileNameMode, "", "Партнёры", "leadgen-weekly-report"),
+    "leadgen-weekly-report Партнёры.xlsx",
+  );
 });
 
 test("cells keep numbers and dates", () => {
